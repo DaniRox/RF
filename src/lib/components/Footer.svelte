@@ -4,12 +4,12 @@
 
 <style>
     .Footer{
-        background-color: var(--columbiaBlue);
+        background-color: var(--dark);
         width: 100%;
         height: auto;
         font-size: 0.8rem;
-        color: var(--paynesGray);
-        font-weight: 400;
+        color: var(--celeste);
+        font-weight: 300;
     }
 
     ul{
@@ -47,7 +47,6 @@
 <div class="Footer">
     <ul>
         <li><a href="mailto:RFyS@rapidofacilyseguro.com">RFyS@rapidofacilyseguro.com </a></li>
-        <li class="li2">Horario de atencion: <br> De 9:00 a 18:00 de lunes a sabado</li>
         <li><a href="/Sobrenosotros">Sobre nosotros</a></li>
     </ul>
 

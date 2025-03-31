@@ -1,6 +1,6 @@
 <script>
-    import "../../styles/reset.css";
-    import "../../styles/colors.css";
+    import "../../../styles/reset.css";
+    import "../../../styles/colors.css";
 	import Formulario from "$lib/components/Formulario.svelte";
 
 
@@ -8,13 +8,13 @@
 </script>
 
 <style>
-    .Servicios {
+    .Seguros-moto {
         width: 100%;
         min-height: 85vh;
         padding: 1rem 5%;
         gap: 1rem;
     }
-    .Servicios__titles {
+    .Seguros-moto__titles {
         color: var(--dark);
         padding: 1rem 0;
         display: flex;
@@ -32,15 +32,15 @@
         font-weight: 400;
     }
 
-    .Servicios-container {
+    .Seguros-moto-container {
         padding: 1rem;
         display: flex;
         justify-content: center;
     }
 
-    .Servicios__form {
+    .Seguros-moto__form {
         width: 25rem;
-        background-color: var(--celeste);
+        background-color: var(--atomicTangerine);
         padding: 1.7rem;
         border-radius: 0.8rem;
         display: flex;
@@ -55,7 +55,7 @@
     }
 
     label {
-        color: var(--dark);
+        color: var(--honeydew);
         font-size: 0.8rem;
         font-weight: 400;
     }
@@ -63,10 +63,8 @@
     .input {
         height: 2.4rem;
         padding: 0.2rem;
-        border: 0.1rem solid var(--paynesGray);
+        border: 0.1rem solid var(--honeydew);
         border-radius: 0.4rem;
-        font-weight: 300;
-        color: var(--dark);
     }
 
     textarea {
@@ -74,8 +72,8 @@
     }
 
     .btn-form {
-        background-color: var(--paynesGray);
-        color: var(--clear);
+        background-color: var(--honeydew);
+        color: var(--atomicTangerine);
         font-size: 0.8rem;
         font-weight: 400;
     }
@@ -92,7 +90,7 @@
     }
 
     @media (min-width: 768px) {
-        .Servicios__titles {
+        .Seguros-moto__titles {
             gap: 0.6rem;
         }
         
@@ -104,11 +102,11 @@
             font-size: 1.2rem; /* Ajustamos el tamaño para móviles */
         }
 
-        .Servicios-container {
+        .Seguros-moto-container {
             padding: 1.5rem;
         }
 
-        .Servicios__form {
+        .Seguros-moto__form {
             padding: 2rem;
         }
 
@@ -130,7 +128,7 @@
             font-size: 1.3rem; /* Ajustamos el tamaño para móviles */
         }
 
-        .Servicios-container {
+        .Seguros-moto-container {
             padding: 2rem;
         }
 
@@ -139,14 +137,14 @@
 
 </style>
 
-<div class="Servicios" id="Servicios">
-    <div class="Servicios__titles">
-        <h1 class="title">Tu vehiculo ideal te espera</h1>
+<div class="Seguros-moto" id="Seguros-moto">
+    <div class="Seguros-moto__titles">
+        <h1 class="title">El seguro para tu moto</h1>
         <h2 class="subtitle">Envia tu formulario y te enviamos el presupuesto</h2>
     </div>
 
-    <div class="Servicios-container">
-        <form action="" class="Servicios__form">
+    <div class="Seguros-moto-container">
+        <form action="" class="Seguros-moto__form">
             <div class="form__group-input">
                 <label for="">Nombre</label>
                 <input type="text" class="input">
@@ -163,18 +161,28 @@
             </div>
 
             <div class="form__group-input">
-                <label for="">Número de teléfono</label>
+                <label for="">Marca de la moto</label>
                 <input type="text" class="input">
             </div>
 
             <div class="form__group-input">
-                <label for="">Marca, modelo y año</label>
+                <label for="">Modelo de la moto</label>
                 <input type="text" class="input">
             </div>
 
             <div class="form__group-input">
-                <label for="">Descripcion del trabajo a realizar</label>
-                <textarea name="" id="" class="input" placeholder="placeholder"></textarea>
+                <label for="">Año de la moto</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="form__group-input">
+                <label for="">Fotos</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="form__group-input">
+                <label for="">Comentarios</label>
+                <textarea name="" id="" class="input"></textarea>
             </div>
 
             <div class="form__group-input">

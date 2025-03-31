@@ -1,7 +1,7 @@
 <script>
-    export let img1 = "/img/img1.jpg";
-    export let img2 = "/img/img2.jpg";
-    export let img3 = "/img/img3.jpg"; 
+    export let img1 = "/img/autos.jpg";
+    export let img2 = "/img/seguros.jpg";
+    export let img3 = "/img/detailing.jpg"; 
 
     let images = [
         img1, 
@@ -38,14 +38,27 @@
     .Carrusel { 
         position: relative; 
         width: 100%;
-        height: 10rem;
+        height: 11rem;
         margin: 0 auto; 
         overflow: hidden;
     }
 
-    .image-container { 
-        display: flex; 
-        transition: transform 0.5s ease; 
+    .Carrusel::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4rem; /* Altura del efecto difuminado */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Gradiente blanco */
+        pointer-events: none; /* Asegura que no interfiera con los clics */
+        z-index: 2; /* Coloca el efecto encima del contenido */
+    }
+
+    .Carrusel__image-container { 
+        display: flex;
+        align-items: center;
+        transition: transform 0.8s ease; 
         width: 100%;
         height: 100%;
     } 
@@ -61,17 +74,16 @@
         object-position: center; 
     } 
 
-    .arrows { 
+    .Carrusel__arrows-container { 
         position: absolute; 
         top: 50%; 
         transform: translateY(-50%); 
         display: flex; 
-        justify-content: 
-        space-between; 
+        justify-content: space-between; 
         width: 100%; 
     }
 
-    .arrow { 
+    .arrows-container__arrow { 
         background-color: transparent; 
         border: none; 
         font-size: 1rem; 
@@ -79,12 +91,12 @@
         padding: 0rem; 
     } 
 
-    .arrow.left { 
+    .arrows-container__arrow--left { 
         left: 0;
         transform: rotate(90deg);
     } 
 
-    .arrow.right { 
+    .arrows-container__arrow--right { 
         right: 0;
         transform: rotate(270deg);
     }
@@ -93,11 +105,14 @@
         width: 1.7rem;
     }
 
-    .image-wrapper { 
-        mask-image: linear-gradient(
-        white 85%,
-        transparent
-        )
+
+
+
+    @media (min-width: 480px){
+        .Carrusel { 
+            width: 100%;
+            height: 15rem;
+        }
     }
 
     @media (min-width: 768px){
@@ -126,7 +141,7 @@
 
 
 <div class="Carrusel">
-    <div class="image-container" style="transform: translateX({-currentImageIndex * 100}%)"> 
+    <div class="Carrusel__image-container" style="transform: translateX({-currentImageIndex * 100}%)"> 
         {#each images as image} 
             <div class="image-wrapper">
                 <img src={image} alt="Carrusel Image" />
@@ -134,8 +149,8 @@
         {/each}
     </div>
 
-    <div class="arrows"> 
-        <button class="arrow left" on:click={prevImage}><img class="flechaicono"  src="/img/flechaicono.svg" alt=""> </button> 
-        <button class="arrow right" on:click={nextImage}><img class="flechaicono" src="/img/flechaicono.svg" alt=""></button>
+    <div class="Carrusel__arrows-container"> 
+        <button class="arrows-container__arrow arrows-container__arrow--left" on:click={prevImage}><img class="flechaicono"  src="/img/flechaicono.svg" alt=""> </button> 
+        <button class="arrows-container__arrow arrows-container__arrow--right" on:click={nextImage}><img class="flechaicono" src="/img/flechaicono.svg" alt=""></button>
     </div>
 </div>

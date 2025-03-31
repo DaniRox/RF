@@ -1,100 +1,133 @@
 <script>
-    export let titulo="titulo";
-    export let precio="precio";
+    export let titulo="Auto";
     export let descripcion="descripcion";
     export let img="#";
+    export let precio="000.000";
+    export let link = "";
 </script>
 
+
+
 <style>
-    .card{
-        background-color: white;
-        width: 8.5rem;
-        height: 12rem;
-        padding: 1rem;
+    .Card {
+        background-color: var(--clear);
+        width: 10rem;
+        height: 13rem;
+        padding: 0.6rem;
         border-radius: 0.4rem;
-        color: black;
-        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.10);
+        box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.220);
+        flex: none;
         display: flex;
         flex-direction: column;
-        margin: 0.40rem;
     }
-    .titulo{
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding-bottom: 0.3rem;
-        
-    }
-    .precio{
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 0.3rem 0;
-    }
-    .descripcion{
-        font-size: 0.65rem;
-        font-weight: 400;
-    }
-    .foto{
+    
+    .Card__img {
         width: 100%;
         height: 6rem;
+        border-radius: 0.3rem 0.3rem 0 0;
         overflow: hidden;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
-        
+        align-items: flex-end; 
     }
-    img{
-        max-width: none;
+    
+    img {
         height: 100%;
+        max-width: none;
+        width: auto;
     }
-    @media (min-width: 768px){
-        .card{
-            width: 12rem;
-            height: 15rem;
-        }
-        .titulo{
-        font-size: 1rem;
-        padding-bottom: 0.5rem;
-        }
-        .precio{
-        font-size: 1.2rem;
+
+    .Card__text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem 0;
+    }
+
+    .titulo {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .descripcion {
+        font-size: 0.65rem;
+        font-weight: 300;
+    }
+
+    .precio {
+        font-size: 0.85rem;
         font-weight: 400;
-        padding: 0.5rem 0;
-        }
-        .descripcion{
-            font-size: 0.95rem;
-            font-weight: 400;
+    }
+
+    
+    @media (min-width: 768px){
+        .Card__text {
+            gap: 0.6rem;
         }
     }
-    @media (min-width: 1440px){
-        .card{
-            width: 13rem;
+    
+    @media (min-width: 768px){
+        .Card {
+            width: 12rem;
+            height: 16rem;
+        }
+
+        .Card__img {
+            height: 7.5rem;
+        }
+
+        .Card__text {
+            gap: 0.7rem;
+        }
+
+    
+        .titulo {
+            font-size: 1rem;
+        }
+
+        .descripcion {
+            font-size: 0.75rem;
+        }
+
+        .precio {
+            font-size: 0.95rem;
+        }
+    }
+    @media (min-width: 1024px){
+        .Card {
+            width: 14rem;
             height: 18rem;
         }
-        .titulo{
-        font-size: 1rem;
-        padding-bottom: 0.5rem;
+
+        .Card__img {
+            height: 8.5rem;
         }
-        .precio{
-        font-size: 1.2rem;
-        font-weight: 400;
-        padding: 0.5rem 0;
+
+        .titulo {
+            font-size: 1.1rem;
         }
+
         .descripcion{
-            font-size: 0.95rem;
-            font-weight: 400;
+            font-size: 0.85rem;
+        }
+
+        .precio {
+            font-size: 1.05rem;
         }
 
     }
 </style>
 
-<div class="card" id="Sobrenosotros">
-    <h1 class="titulo">{titulo} </h1>
-    <div class="foto"> 
+
+
+<a class="Card" id="" rel={link} >
+    <div class="Card__img"> 
         <img src="{img}" alt="">
     </div>
-    <div class="info">
-        <p class="precio">{precio}</p>
+    <div class="Card__text">
+        <h1 class="titulo">{titulo} </h1>
         <p class="descripcion">{descripcion}</p>
+        <p class="precio">${precio}</p>
     </div>
 
-</div>
+</a>

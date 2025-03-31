@@ -8,13 +8,13 @@
 </script>
 
 <style>
-    .Servicios {
+    .Vende {
         width: 100%;
         min-height: 85vh;
         padding: 1rem 5%;
         gap: 1rem;
     }
-    .Servicios__titles {
+    .Vende__titles {
         color: var(--dark);
         padding: 1rem 0;
         display: flex;
@@ -32,13 +32,13 @@
         font-weight: 400;
     }
 
-    .Servicios-container {
+    .Vende-container {
         padding: 1rem;
         display: flex;
         justify-content: center;
     }
 
-    .Servicios__form {
+    .Vende__form {
         width: 25rem;
         background-color: var(--celeste);
         padding: 1.7rem;
@@ -65,8 +65,6 @@
         padding: 0.2rem;
         border: 0.1rem solid var(--paynesGray);
         border-radius: 0.4rem;
-        font-weight: 300;
-        color: var(--dark);
     }
 
     textarea {
@@ -92,7 +90,7 @@
     }
 
     @media (min-width: 768px) {
-        .Servicios__titles {
+        .Vende__titles {
             gap: 0.6rem;
         }
         
@@ -104,11 +102,11 @@
             font-size: 1.2rem; /* Ajustamos el tamaño para móviles */
         }
 
-        .Servicios-container {
+        .Vende-container {
             padding: 1.5rem;
         }
 
-        .Servicios__form {
+        .Vende__form {
             padding: 2rem;
         }
 
@@ -130,7 +128,7 @@
             font-size: 1.3rem; /* Ajustamos el tamaño para móviles */
         }
 
-        .Servicios-container {
+        .Vende-container {
             padding: 2rem;
         }
 
@@ -139,14 +137,14 @@
 
 </style>
 
-<div class="Servicios" id="Servicios">
-    <div class="Servicios__titles">
-        <h1 class="title">Tu vehiculo ideal te espera</h1>
+<div class="Vende" id="Vende">
+    <div class="Vende__titles">
+        <h1 class="title">Vende tu auto</h1>
         <h2 class="subtitle">Envia tu formulario y te enviamos el presupuesto</h2>
     </div>
 
-    <div class="Servicios-container">
-        <form action="" class="Servicios__form">
+    <div class="Vende-container">
+        <form action="" class="Vende__form">
             <div class="form__group-input">
                 <label for="">Nombre</label>
                 <input type="text" class="input">
@@ -168,13 +166,28 @@
             </div>
 
             <div class="form__group-input">
-                <label for="">Marca, modelo y año</label>
+                <label for="">Marca</label>
                 <input type="text" class="input">
             </div>
 
             <div class="form__group-input">
-                <label for="">Descripcion del trabajo a realizar</label>
-                <textarea name="" id="" class="input" placeholder="placeholder"></textarea>
+                <label for="">Modelo del auto</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="form__group-input">
+                <label for="">Año</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="form__group-input">
+                <label for="">Fotos</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="form__group-input">
+                <label for="">Comentarios</label>
+                <textarea name="" id="" class="input"></textarea>
             </div>
 
             <div class="form__group-input">

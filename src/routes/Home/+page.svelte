@@ -1,10 +1,9 @@
 <script>
-// @ts-nocheck
-    import Baner from '$lib/components/Baner.svelte';
-    import ContainerVertical from '$lib/components/ContainerVertical.svelte';
+    import "../../styles/reset.css";
+    import "../../styles/colors.css";
+    import Banner from '$lib/components/Banner.svelte';
     import Container from '$lib/components/Container.svelte';
     import Card from '../../lib/components/Card.svelte';
-	import BanerFondo from '$lib/components/BanerFondo.svelte';
 	import Carrusel from "$lib/components/Carrusel.svelte";
     
     let images = [  
@@ -16,145 +15,148 @@
     ];  
 </script>
 
+
+
 <style>
     .Home{
         width: 100%;
         height: auto;
-        min-height: 50vh;
+        min-height: 85vh;
+        padding-bottom: 1rem;
     }
-    .banervehiculos{
-        margin-top: 0.2rem; /* MArgen con el objeto q tiene arriba */
-        margin-right: 1rem; /* Ajusta esta medida según tus necesidades */
-    }
-    .banerdoble{
+
+    .Home-container {
+        height: auto;
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+
+    .banner-container {
+        width: 100%;
+        display: flex;
         flex-direction: row;
-        gap: 0.9rem;
-        justify-content: flex-start;
-        scrollbar-width: none;
-        overflow: auto;
-        margin-right: 0rem; /* Ajusta esta medida según tus necesidades */     
+        gap: 1rem;
     }
-    .banerseguros { 
-        display: block; 
-        margin: 0.1rem auto; 
-        max-width: 13rem; 
-        height: 6rem;
-        width: 100%; 
-        
-    }
-    .banerdetailing { 
-        display: block; 
-        margin: 0.1rem auto; 
-        max-width: 13rem; 
-        height: 6rem;
-        width: 10rem; 
-    }
-    @media (min-width: 375px) {
-        .banerdoble{
-            gap: 0rem;
-            margin-right: rem;
-            margin-left: 0rem;
-        }        
-        .banerdetailing{
-            width: 90%;
-            margin-right: 0.5rem;
-            margin-left: 0.5rem;
-        }
-        .banerseguros{
-            width: 90%;
-            margin-right: 0rem;
-            margin-left: 0rem;
-        }
-    }
-        @media (min-width: 425px) {
-        .banerdoble{
-            gap: 0rem;
-            margin-right: 0rem;
-            margin-left: 0rem;
-        }        
-        .banerdetailing{
-            width: 90%;
-            margin-right: 0.5rem;
-            margin-left: 0rem;
+    
 
-        }
-        .banerseguros{
-            width: 90%;
-            margin-right: 1rem;
-            margin-left: 0rem;
-        }
-    }
     @media (min-width: 480px) {
-        .banerdoble{
-            gap: 1rem;
-            margin-right: 0rem;
-            margin-left: 0rem;
-        }        
-        .banerdetailing{
-            width: 100%;
-            margin-right: 0.5rem;
-            margin-left: 0rem;
-
+        .Home-container {
+            gap: 1.5rem;
         }
-        .banerseguros{
-            width: 100%;
-            margin-right: 0rem;
-            margin-left: 0rem;
+
+        .banner-container {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .Home {
+            padding-bottom: 1.5rem;
+        }
+
+        .Home-container {
+            padding: 1.5rem 5%;
+        }
+
+        .banner-container {
+            gap: 1.7rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .Home {
+            padding-bottom: 2rem;
+        }
+
+        .Home-container {
+            padding: 1.5rem 5%;
+        }
+
+        .banner-container {
+            gap: 2rem;
         }
     }
 </style>
 
+
+
 <div class="Home" id="Inicio">
-    <Carrusel/>   
-    <ContainerVertical>  
-       <a href="/Vehiculos" class="banervehiculos"> 
-            <BanerFondo 
+    <Carrusel/>
+
+    <div class="Home-container">
+
+        <Banner 
             h2="Encontra lo que buscas"
             h1="Vehiculos"
-            img="/img/img3.jpg"/>
-        </a>
-        <div class="banerdoble">
-            <a href="/Detailing" class="banerdetailing"> 
-                <BanerFondo
+            img="/img/autos.jpg"
+            link="../Vehiculos/"
+            heightLg="15rem"
+        />
+
+        <div class="banner-container">
+            <Banner
                 h2="Que buscas?"
                 h1="Detailing"
-                img="/img/img3.jpg"/>
-            </a>
-            <a href="/Seguros" class="banerseguros">
-                <BanerFondo
+                img="/img/detailing.jpg"
+                link="../Detailing/"
+                heightLg="15rem"
+            />
+
+            <Banner
                 h2="Cotiza hoy mismo"
                 h1="Seguros"
-                img="/img/img3.jpg"/>
-            </a>
+                img="/img/seguros.jpg"
+                link="../Seguros/"
+                heightLg="15rem"
+            />
         </div>
-    </ContainerVertical>
 
-    <Container> 
-        <a  href="/Servicios"> 
+        <Banner 
+            h2="Encontra lo que buscas"
+            h1="Vende"
+            img="/img/venta.jpg"
+            link="../Vende/"
+            heightLg="15rem"
+        />
+
+    </div>
+    
+    <div class="Home-container">
+        <Container> 
             <Card
-            titulo="Seguros"
-            img="/img/lechugamanteca.jpg"
-            precio="Seguros"
-            descripcion="Cotiza tu seguro y busca el mejor precio."/>
-        </a>
-        <a  href="/Productos"> 
+                img="/img/auto1.jpg"
+                descripcion="Cotiza tu seguro y busca el mejor precio."
+                link="../Vehiculos/Vehiculo/+page.svelte"
+            />
+
             <Card
-            titulo="Vehiculos"
-            img="/img/lechugamanteca.jpg"
-            precio="Vehiculos"
-            descripcion="Encontra el vehiculo perfecto para vos"/>
-        </a>
-        <Card
-            titulo="Plantines"
-            img="/img/lechugamanteca.jpg"
-            precio="$ 1.200"
-            descripcion="Plantin de tomate cherry 10cm alto"/>
-        <Card
-            titulo="Plantines"
-            img="/img/lechugamanteca.jpg"
-            precio="$ 1.200"
-            descripcion="Plantin de tomate cherry 10cm alto"/>
-    </Container>
+                img="/img/auto2.jpg"
+                descripcion="Cotiza tu seguro y busca el mejor precio."
+            />
+
+            <Card
+                img="/img/auto3.jpg"
+                descripcion="Cotiza tu seguro y busca el mejor precio."
+            />
+
+            <Card
+                img="/img/auto4.jpg"
+                descripcion="Encontra el vehiculo perfecto para vos"
+            />
+
+            <Card
+                img="/img/auto1.jpg"
+                descripcion="Plantin de tomate cherry 10cm alto"
+            />
+
+            <Card
+                img="/img/auto2.jpg"
+                descripcion="Plantin de tomate cherry 10cm alto"
+            />
+
+        </Container>
+    </div>
+    
 </div>

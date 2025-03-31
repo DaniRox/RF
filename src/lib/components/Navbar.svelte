@@ -46,7 +46,7 @@
         flex-direction: row;
         align-items: center;
         background-color: var(--paynesGray);
-        padding: 0.6rem 5%;
+        padding: 0.8rem 5%;
     }
 
     .Navbar__menu-navbar {
@@ -109,7 +109,7 @@
     }
 
     .menu-navbar__user-btn-icon {
-        width: 1.8rem;
+        width: 1.5rem;
     }
 
     .menu-navbar__menu-mobile {
@@ -118,7 +118,7 @@
     }
 
     .menu-navbar__icon-menu {
-        height: 1.8rem;
+        height: 1.5rem;
     }
 
     .Navbar__navlinks {
@@ -142,32 +142,24 @@
         cursor: pointer;
         transition: all 0.3s ease;
         color: var(--clear);
-        font-size: 1.1rem;
-        font-weight: 400;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .text:hover {
+        color: var(--celeste);
+        transform: scale(1.05, 1.05);
     }
 
     .link {
         text-decoration: none;
         color: inherit;
-        font-size: 1rem;
-    }
-
-    .publicidad{
-        display: none;
-    }
-
-    .navlinks__user-btn {
-        display: none;
-    }
-
-    .iconocarrito{
-        width: 2.2rem;
     }
 
 
     @media (min-width: 480px) {
         .menu-navbar__buscador {
-            width: 16rem;
+            width: 18rem;
         }
     }
     
@@ -178,8 +170,12 @@
             gap: 0.5rem;
         }
 
+        .menu-navbar__buttons {
+            gap: 0rem;
+        }
+
         .menu-navbar__buscador {
-            width: 18rem;
+            width: 75%;
         }
 
         .menu-navbar__icon-menu {
@@ -189,7 +185,7 @@
         .Navbar__navlinks {
             width: 100%;
             position: relative;
-            justify-content: space-between;
+            justify-content: center;
             display: flex;
             flex-direction: row;
         }
@@ -201,43 +197,24 @@
             flex-direction: row;
             padding: 0;
             top: 0;
-            gap: 1.8rem;
+            gap: 2.6rem;
         }
 
-        .publicidad{
-            display: block;
-            font-size: 1rem;
-            color: #ffffff;
-            font-family: "Dating";
-            font-weight: 800;
-        }
-
-        .navlinks__user-btn {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .usermobile {
-            display: none;
+        .text {
+            font-size: 0.9rem;
         }
 
     }
     @media (min-width: 1024px) {
         .Navbar {
-            padding: 0.5rem 5%;
+            padding: 1rem 5%;
             gap: 0.5rem;
         }
-        .logo {
-            font-size: 5rem;
+
+        .text {
+            font-size: 1rem;
         }
-        .link{
-            font-size: 1.3rem;
-        }
-        .divBuscador{
-            height: 2.4rem;
-            padding: 0 2rem;
-        }
+
     }
 </style>
 
@@ -261,8 +238,7 @@
             <button on:click={toggleMenu} class="menu-navbar__menu-mobile">
                 <img src="/img/menu.png" alt="menu" class="menu-navbar__icon-menu" >
             </button>
-            
-            <p class="publicidad">Publicidad</p>
+
         </div>
         
         
@@ -275,17 +251,10 @@
                 <li class="text"><a href="/Vehiculos" class="link" on:click={closeMenu}>Vehiculos</a></li>
                 <li class="text"><a href="/Seguros" class="link" on:click={closeMenu}>Seguros</a></li>
                 <li class="text"><a href="/Detailing" class="link" on:click={closeMenu}>Detailing</a></li>
-                <li class="text"><a href="/Servicios" class="link" on:click={closeMenu}>Servicios</a></li>
-                <li class="usermobile text"><a href="#ingresar" class="link" on:click={closeMenu}>Registrate</a></li>
+                <li class="text"><a href="/Vende" class="link" on:click={closeMenu}>Vende tu auto</a></li>
             </ul>
         {/if}
-        
 
-        
-        <div class="navlinks__user-btn">
-            <button class="userdesktop text"><a href="#ingresar" on:click={smoothScroll} class="link">Registrate</a></button>
-            <button><a href="#carrito" on:click={smoothScroll} class="link"><img class="iconocarrito" src="/img/user.png" alt="Carrito"></a></button>
-        </div>
     </div>
         
 </nav>

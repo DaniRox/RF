@@ -1,62 +1,149 @@
 <script>
+    import "../../styles/reset.css";
+    import "../../styles/colors.css";
 	import Card from "$lib/components/Card.svelte";
-	import CardVehiculo from "$lib/components/CardVehiculo.svelte";
 	import Container from "$lib/components/Container.svelte";
-
 
 </script>
 
+
+
 <style>
-    .content{
-        margin-top: 18px;
+    .Vehiculos {
         width: 100%;
-        min-height: 80vh;
-    }
-    h1, h2 {
-        font-size: 2rem; /* Aumentamos el tamaño de fuente */
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 1.5rem;
-        padding-left: 0.5cm; /* Movemos el texto medio centímetro a la derecha */
-        
+        padding: 1rem 5%;
+        min-height: 85vh;
     }
 
-    h2 {
-        font-size: 1.5rem; /* Un poco más pequeño que h1 */
+    .Vehiculos__titles {
+        color: var(--dark);
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+
+    .subtitle {
+        font-size: 1rem; 
+        font-weight: 400;
     }
 
     /* Media query para dispositivos móviles */
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 1.75rem; /* Ajustamos el tamaño para móviles */
+    @media (min-width: 480px) {
+        .title {
+            font-size: 1.9rem; /* Ajustamos el tamaño para móviles */
         }
 
-        h2 {
-            font-size: 1.25rem; /* Ajustamos el tamaño para móviles */
+        .subtitle {
+            font-size: 1.1rem; /* Ajustamos el tamaño para móviles */
+        }
+    }
+
+    @media (min-width: 768px) {
+        .Vehiculos__titles {
+            gap: 0.6rem;
+        }
+        
+        .title {
+            font-size: 2rem; /* Ajustamos el tamaño para móviles */
+        }
+
+        .subtitle {
+            font-size: 1.2rem; /* Ajustamos el tamaño para móviles */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .title {
+            font-size: 2.1rem; /* Ajustamos el tamaño para móviles */
+        }
+
+        .subtitle {
+            font-size: 1.3rem; /* Ajustamos el tamaño para móviles */
         }
     }
 </style>
 
-<div class="content">
-    <h1>Elegi tu vehiculo hoy</h1>
-    <h2>Tenemos todo lo que buscas</h2>
 
-    
+
+<div class="Vehiculos">
+    <div class="Vehiculos__titles">
+        <h1 class="title">Elegi tu vehiculo hoy</h1>
+        <h2 class="subtitle">Tenemos todo lo que buscas</h2>
+    </div>
+
+
     <Container> 
-        <a  href="/Servicios"> 
-            <CardVehiculo
-            titulo="Seguros"
-            img="/img/lechugamanteca.jpg"
-            --precio="Seguros"
-            descripcion="Cotiza tu seguro y busca el mejor precio."/>
-        </a>
-        <a  href="/Servicios"> 
-            <CardVehiculo
-            titulo="Seguros"
-            img="/img/lechugamanteca.jpg"
-            --precio="Seguros"
-            descripcion="Cotiza tu seguro y busca el mejor precio."/>
-        </a>
+        <Card
+            img="/img/auto1.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
+        <Card
+            img="/img/auto2.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
+        <Card
+            img="/img/auto3.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
+        <Card
+            img="/img/auto4.jpg"
+            descripcion="Encontra el vehiculo perfecto para vos"
+        />
+
+        <Card
+            img="/img/auto1.jpg"
+            descripcion="Plantin de tomate cherry 10cm alto"
+        />
+
+        <Card
+            img="/img/auto2.jpg"
+            descripcion="Plantin de tomate cherry 10cm alto"
+        />
+
+    </Container>
+
+
+    <Container>
+
+        <Card
+            img="/img/auto4.jpg"
+            descripcion="Encontra el vehiculo perfecto para vos"
+        />
+
+        <Card
+            img="/img/auto1.jpg"
+            descripcion="Plantin de tomate cherry 10cm alto"
+        />
+
+        <Card
+            img="/img/auto2.jpg"
+            descripcion="Plantin de tomate cherry 10cm alto"
+        />
+
+        <Card
+            img="/img/auto1.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
+        <Card
+            img="/img/auto2.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
+        <Card
+            img="/img/auto3.jpg"
+            descripcion="Cotiza tu seguro y busca el mejor precio."
+        />
+
     </Container>
 
 </div>

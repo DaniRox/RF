@@ -1,4 +1,6 @@
 <script>
+  import "../../styles/reset.css";
+  import "../../styles/colors.css";
 	import HoverCard from "$lib/components/HoverCard.svelte";
 
   const categories = [
