@@ -2,7 +2,7 @@
     import "../../styles/reset.css";
     import "../../styles/colors.css";
     import Banner from "$lib/components/Banner.svelte";
-    import Container from '$lib/components/Container.svelte';
+    import Container from "$lib/components/Container.svelte";
     import Card from "$lib/components/Card.svelte";
 	import Carrusel from "$lib/components/Carrusel.svelte";
     
