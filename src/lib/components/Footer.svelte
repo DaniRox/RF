@@ -10,44 +10,46 @@
         font-size: 0.8rem;
         color: var(--celeste);
         font-weight: 300;
-    }
-
-    ul{
+        padding: 1.5rem 5%;
         display: flex;
         flex-direction: column;
-        padding: 0.4rem 0;
+        gap: 1rem;
     }
 
-    li{
-        padding: 0.4rem 0;
-        text-align: center;
-        line-height: 1rem;
+    a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    a:hover {
+        color: var(--celeste);
     }
 
     @media(min-width: 768px){
-        ul{
+        .Footer{
+            padding: 2rem 5%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        a {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media(min-width: 1024px){
+        .Footer{
+            padding: 3rem 5%;
             flex-direction: row;
             justify-content: space-around;
-        }
-        li{
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
-        .li2{
-            padding-top: 2rem;
-            
-        }
-        .Footer{
-            padding: 1.5rem 0;
         }   
     }
 </style>
 
 
 <div class="Footer">
-    <ul>
-        <li><a href="mailto:RFyS@rapidofacilyseguro.com">RFyS@rapidofacilyseguro.com </a></li>
-        <li><a href="/Sobrenosotros">Sobre nosotros</a></li>
-    </ul>
+    <a href="mailto:RFyS@rapidofacilyseguro.com">RFyS@rapidofacilyseguro.com </a>
+    <a href="/Sobrenosotros">Sobre nosotros</a>
 
 </div>
