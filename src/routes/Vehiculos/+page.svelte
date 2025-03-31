@@ -82,31 +82,37 @@
         <Card
             img="/img/auto1.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="../Vehiculos/Vehiculo/"
         />
 
         <Card
             img="/img/auto2.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="../Vehiculos/Vehiculo/"
         />
 
         <Card
             img="/img/auto3.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="../Vehiculos/Vehiculo/"
         />
 
         <Card
             img="/img/auto4.jpg"
             descripcion="Encontra el vehiculo perfecto para vos"
+            link="../Vehiculos/Vehiculo/"
         />
 
         <Card
             img="/img/auto1.jpg"
             descripcion="Plantin de tomate cherry 10cm alto"
+            link="../Vehiculos/Vehiculo/"
         />
 
         <Card
             img="/img/auto2.jpg"
             descripcion="Plantin de tomate cherry 10cm alto"
+            link="../Vehiculos/Vehiculo/"
         />
 
     </Container>
@@ -117,31 +123,37 @@
         <Card
             img="/img/auto4.jpg"
             descripcion="Encontra el vehiculo perfecto para vos"
+            link="./Vehiculo/"
         />
 
         <Card
             img="/img/auto1.jpg"
             descripcion="Plantin de tomate cherry 10cm alto"
+            link="./Vehiculo/"
         />
 
         <Card
             img="/img/auto2.jpg"
             descripcion="Plantin de tomate cherry 10cm alto"
+            link="./Vehiculo/"
         />
 
         <Card
             img="/img/auto1.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="./Vehiculo/"
         />
 
         <Card
             img="/img/auto2.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="./Vehiculo/"
         />
 
         <Card
             img="/img/auto3.jpg"
             descripcion="Cotiza tu seguro y busca el mejor precio."
+            link="./Vehiculo/"
         />
 
     </Container>

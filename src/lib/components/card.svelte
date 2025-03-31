@@ -3,7 +3,7 @@
     export let descripcion="descripcion";
     export let img="#";
     export let precio="000.000";
-    export let link = "";
+    export let link = "#";
 </script>
 
 
@@ -19,6 +19,10 @@
         flex: none;
         display: flex;
         flex-direction: column;
+
+        text-decoration: none;
+        color: var(--dark);
+        cursor: pointer;
     }
     
     .Card__img {
@@ -120,7 +124,7 @@
 
 
 
-<a class="Card" id="" rel={link} >
+<a class="Card" id="" href={link} >
     <div class="Card__img"> 
         <img src="{img}" alt="">
     </div>
