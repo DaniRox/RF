@@ -88,7 +88,7 @@
     <div class="image-container" bind:this={container} on:scroll={updateCurrentIndex}> 
         {#each imagesProducto as image} 
             <div class="image-wrapper">
-            <img src={image} alt="Carrusel Image" />
+                <img src={image} alt="Carrusel Image" />
             </div> 
         {/each}
     </div> 

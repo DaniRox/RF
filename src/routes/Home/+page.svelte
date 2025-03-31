@@ -6,13 +6,6 @@
     import Card from '$lib/components/Card.svelte';
 	import Carrusel from "$lib/components/Carrusel.svelte";
     
-    let images = [  
-        'static/img/ofertas.jpeg',
-        'static/img/plantinesProductos.jpeg',  
-        'https://via.placeholder.com/600x300?text=Image+2',  
-        'https://via.placeholder.com/600x300?text=Image+3',  
-        'https://via.placeholder.com/600x300?text=Image+4',  
-    ];  
 </script>
 
 
