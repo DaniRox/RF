@@ -144,7 +144,7 @@
     <div class="Carrusel__image-container" style="transform: translateX({-currentImageIndex * 100}%)"> 
         {#each images as image} 
             <div class="image-wrapper">
-                <img src={image} alt="Carrusel Image" />
+                <img src={image} alt="Carrusel Imagen" />
             </div> 
         {/each}
     </div>

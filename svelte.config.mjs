@@ -1,5 +1,5 @@
-// svelte.config.mjs
-import adapter from "@sveltejs/adapter-vercel";
+
+import adapter from '@sveltejs/adapter-vercel';
 
 const config = {
     kit: {
