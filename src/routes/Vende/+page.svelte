@@ -1,10 +1,6 @@
 <script>
     import "../../styles/reset.css";
     import "../../styles/colors.css";
-	import Formulario from "$lib/components/Formulario.svelte";
-
-
-
 </script>
 
 <style>
