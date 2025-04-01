@@ -75,7 +75,8 @@
 
 
 
-<div class="Home" id="Inicio">
+<main class="Home" id="Inicio">
+
     <Carrusel/>
 
     <div class="Home-container">
